@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Job Listings</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="getInfo()">
+  <div class="whale-section">
+    <header class="header"></header>
+    <main class="content">
+      <div class="content__filter filter">
+        <div class="filter__list">
+          <div class="filter__list__block" id="filter__html">
+            <p class="filter__list__block__text html">
+              HTML
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__html')"> 
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__css">
+            <p class="filter__list__block__text css">
+              CSS
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__css')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__js">
+            <p class="filter__list__block__text js">
+              JavaScript
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__js')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__python">
+            <p class="filter__list__block__text python">
+              Python
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__python')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__ruby">
+            <p class="filter__list__block__text ruby">
+              Ruby
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__ruby')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__react">
+            <p class="filter__list__block__text react">
+              React
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__react')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__sass">
+            <p class="filter__list__block__text sass">
+              Sass
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__sass')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__ror">
+            <p class="filter__list__block__text ror">
+              RoR
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__ror')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__vue">
+            <p class="filter__list__block__text vue">
+              Vue
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__vue')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__django">
+            <p class="filter__list__block__text django">
+              Django
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__django')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__frontend">
+            <p class="filter__list__block__text frontend">
+              Frontend
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__frontend')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__fullstack">
+            <p class="filter__list__block__text fullstack">
+              Fullstack
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__fullstack')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__backend">
+            <p class="filter__list__block__text backend">
+              Backend
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__backend')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__senior">
+            <p class="filter__list__block__text senior">
+              Senior
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__senior')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__midweight">
+            <p class="filter__list__block__text midweight">
+              Midweight
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__midweight')">
+            </div>
+          </div>
+          <div class="filter__list__block" id="filter__junior">
+            <p class="filter__list__block__text junior">
+              Junior
+            </p>
+            <div class="filter__list__block__delete">
+              <img src="./images/icon-remove.svg" alt="Icon remove" onclick="deleteFilter('filter__junior')">
+            </div>
+          </div>
+        </div>
+        <div class="filter__clear">
+          <p onclick="clearButton()">Clear</p>
+        </div>
+      </div>
+      <div class="content__result result">
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
